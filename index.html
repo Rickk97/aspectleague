@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Aspect League PSO</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        * {
+            background-color: #1e1e1e;
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+            animation: fadeInDown 1s;
+        }
+
+        .navbar-text {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            gap: 50px;
+        }
+
+        .navbar-text a {
+            display: flex;
+            flex-wrap: wrap;
+            text-decoration: none;
+            color: gray;
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        .navbar-text a:hover {
+            display: flex;
+            flex-wrap: wrap;
+            text-decoration: none;
+            color: white;
+            align-items: center;
+            transform: scale(1.2);
+            transition: 0.5s;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        /* Main Bölgesi */
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 125px;
+            gap: 25px;
+            animation: fadeInDown 1s;
+        }
+
+        .main-logo img {
+            width: 300px;
+            height: 300px;
+            border-radius: 150px;
+            border: 2px solid white;
+            background: transparent;
+        }
+
+        .btn {
+            width: auto;
+            height: 41px;
+            padding: 6px;
+            border-radius: 10px;
+            border: solid #6e5fce;
+            background-color: #6e5fce;
+            text-decoration: none;
+            color: white;
+            transition: 0.5s;
+        }
+
+        .btn:hover {
+            border: solid #594cbc;
+            background-color: #594cbc;
+            color: white;
+            transition: 0.5s;
+        }
+
+        /* Main Card */
+
+        .main-card {
+            margin-top: 175px;
+            padding: 25px;
+            margin-bottom: 25px;
+            animation: fadeInDown 1s;
+        }
+
+        .main-card-div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .main-card-2 {
+            position: absolute;
+            text-align: end;
+            margin-top: 200px;
+            right: 25px;
+        }
+
+        /* Font Awesome */
+
+        i {
+            margin-right: 5px;
+            background: transparent;
+        }
+
+        /* Scroll Bar */
+
+        ::-webkit-scrollbar {
+            display: none;
+            visibility: hidden;
+            opacity: 0
+        }
+
+        /* Responsive Tasarım */
+
+        @media (max-width: 768px) {
+
+            .main-text {
+                text-align: center;
+            }
+
+            .navbar-text {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                background-color: #1e1e1e;
+                padding: 50px;
+                width: 225px;
+                right: 25px;
+                margin-top: 450px;
+                border-radius: 25px;
+                border: 2px solid white;
+            }
+
+            .hamburger {
+                display: flex;
+                align-items: center;
+                font-size: 25px;
+                color: white;
+            }
+
+            .menu-toggle:checked+.navbar-text {
+                display: flex;
+                animation: fadeInRight 0.5s;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="navbar">
+            <div class="navbar-logo">
+                <h1 style="color: white;">ASPECT LEAGUE</h1>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <div class="navbar-text">
+                <a href="index.html">AnaSayfa</a>
+                <a href="https://copafacil.com/-3nqwo">Puan Durumu</a>
+                <a href="https://copafacil.com/-3nqwo">Fikstür</a>
+                <a href="https://discord.gg/KDjYgvyZje">Discord</a>
+            </div>
+            <label for="menu-toggle" class="hamburger">☰</label>
+        </div>
+
+        <div class="main">
+            <div class="main-logo">
+                <img src="/aspectleague.png" alt="">
+            </div>
+            <div class="main-text">
+                <h1 style="color: white;">Aspect League #KaliteninTekAdresi</h1>
+                <p style="color: gray;">Pro Soccer Online Türkiye Ligi, futbol tutkunları için hazırlanmış rekabetçi,
+                    düzenli ve profesyonel <br>
+                    yapıya sahip bir çevrimiçi futbol ligidir. Oyuncular burada sadece maç yapmaz; aynı zamanda <br>
+                    gerçek
+                    bir lig atmosferi yaşar.
+                    Organize fikstür sistemi, transfer dönemi, haftalık maçlar, hakem raporları ve medya desteğiyle <br>
+                    oyunculara bir oyundan çok daha fazlasını sunuyoruz.</p>
+                <div class="main-button">
+                    <a href="https://discord.gg/KDjYgvyZje" class="btn"><i class="fa-brands fa-discord"></i>Discord'a Katıl</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-card">
+            <h1 style="color: white; text-align: center; margin-bottom: 100px;">Apex League Hakkında</h1>
+            <div class="main-card-div">
+                <div class="main-card-1">
+                    <h1 style="color: white;">Aspect League Sistemi</h1>
+                    <p style="color: gray;">Haftalık maçlar, puan durumu, fikstür, transfer dönemi ve ödüllü sezonlarla
+                        gerçek futbol ligi deneyimi sunuyoruz.</p>
+                    <a href="https://discord.gg/KDjYgvyZje" class="btn"><i class="fa-brands fa-discord"></i>Discord'a Katıl</a>
+                </div>
+                <div class="main-card-2">
+                    <h1 style="color: white;">Aspect League Oyuncu Katılımı</h1>
+                    <p style="color: gray;">Takım kur veya bir takıma katıl! Başvuru formunu doldur, Discord’a gel,
+                        sahaya çık ve yeteneklerini göster.</p>
+                    <a href="https://discord.gg/KDjYgvyZje" class="btn"><i class="fa-brands fa-discord"></i>Discord'a Katıl</a>
+                </div>
+            </div>
+        </div>
+
+        <hr style="color: white; margin-top: 250px;">
+
+    </div>
+
+</body>
+
+</html>
